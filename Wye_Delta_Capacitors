@@ -1,0 +1,6 @@
+syms C1 C2 C3  Ca Cb Cc;
+eqn1 =  Ca+Cb == (C2+C3)/(C2*C3+C1*(C2+C3));
+eqn2 =  Ca+Cc == (C1+C3)/(C1*C3+C2*(C1+C3));
+eqn3 =  Cb+Cc == (C2+C1)/(C2*C1+C3*(C2+C1))
+A= solve(eqn1  ,  eqn2 ,  eqn3  , Ca , Cb , Cc ) 
+B= solve( eqn1  ,  eqn2  ,  eqn3  , C1 , C2 , C3 )
