@@ -1,0 +1,19 @@
+s=tf('s');
+sys=exp(-0.1*s);sysx=pade(sys,1);sys1=pade(sys,2);sys2=pade(sys,4);sys3=pade(sys,8)
+figure(1);
+sx= tf([-1 20],[1 20]);
+h = pzplot(sx);
+grid on;
+figure(2);
+s1 = tf([1 -60 1200],[1 60 1200])
+h = pzplot(s1);
+grid on;
+figure(3);
+s2= tf([1 -200 18000 -8.4e05 1.68e07],[1 200 18000 8.4e05 1.68e07]);
+h = pzplot(s2);
+grid on;
+figure(4);
+s3= tf([1 -720 252000 -5.544e07 8.316e09 -8.649e11 6.054e13 - 2.595e15 5.189e16], ...
+    [1 720 252000 5.544e07 8.316e09 8.649e11 6.054e13 2.595e15 5.189e16]);
+h = pzplot(s3);
+grid on
