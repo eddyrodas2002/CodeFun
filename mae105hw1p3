@@ -1,0 +1,7 @@
+syms x L 
+y=(x)/(L^2-x^2);
+f= diff(y);
+s=diff(f);
+u=diff(s);
+t=diff(u);
+vpa(subs(y,x,0))
